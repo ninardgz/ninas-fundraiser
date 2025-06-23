@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🔥✨ Nina's Super Ultra Fundraiser ✨🔥</title>
+    <link rel="icon" href="files/ico/cloud.png">
+    <style>
+        body {
+            background: url("files/gifs/background.gif");
+            color: #ff69b4;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 5px double hotpink;
+            background-color: rgba(255, 240, 245, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1,
+        h2 {
+            text-shadow: 2px 2px 5px #ff1493;
+            animation: rainbowText 2s infinite alternate;
+            background-color: white;
+        }
+
+        @keyframes rainbowText {
+            0% {
+                color: pink;
+            }
+
+            25% {
+                color: magenta;
+            }
+
+            50% {
+                color: violet;
+            }
+
+            75% {
+                color: hotpink;
+            }
+
+            100% {
+                color: deeppink;
+            }
+        }
+
+        textarea,
+        input {
+            width: 300px;
+            height: 60px;
+            margin: 10px;
+            border: 3px dashed #ff69b4;
+            background-color: #fff0f5;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px pink;
+        }
+
+        button {
+            background-color: #ff1493;
+            color: white;
+            font-size: 24px;
+            padding: 15px 30px;
+            border: 5px outset white;
+            border-radius: 20px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .blink-arrow {
+            animation: blink 0.5s infinite;
+            font-size: 40px;
+            color: red;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .demon-gif {
+            width: 100px;
+            margin: 5px;
+            border: 2px solid #ff1493;
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .error {
+            color: red;
+            background-color: white;
+        }
+
+        .success {
+            color: green;
+            white-space: pre-line;
+            background-color: white;
+        }
+
+        .floating-text {
+            position: fixed;
+            color: white;
+            text-shadow: black;
+            font-size: 30px;
+            animation: floatText 5s linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes floatText {
+            from {
+                top: 100%;
+            }
+
+            to {
+                top: -10%;
+            }
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .gifrain {
+            position: fixed;
+            top: -150px;
+            width: 120px;
+            z-index: 998;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -150px; }
+            100% { top: 110vh; }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="files/gifs/nezuko-1.gif" class="gifrain" style="left: 10%;">
+    <img src="files/gifs/tanjiro-1.gif" class="gifrain" style="left: 30%;">
+    <img src="files/gifs/zenitsu.gif" class="gifrain" style="left: 50%;">
+    <img src="files/gifs/inosuke.gif" class="gifrain" style="left: 70%;">
+    <img src="files/gifs/muichiro.gif" class="gifrain" style="left: 90%;">
+    
+    <!-- Floating sparkle canvas -->
+    <canvas id="sparkleCanvas"></canvas>
+
+    <!-- Floating donation texts -->
+    <div class="floating-text" style="left:10%;">💖 DONATE TO NINA 💖</div>
+    <div class="floating-text" style="left:40%;">💸 SLEEPING CHAMPION FUND 💸</div>
+    <div class="floating-text" style="left:70%;">🔥 POWERLIFT MY DREAMS 🔥</div>
+
+    <!-- Autoplay background music -->
+    <audio controls autoplay>
+        <source src="files/audio/theme-demon-slayer.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h2>💀 Welcome to Nina's OVERDRIVE Fundraiser 💀</h2>
+        <p style="background-color: white;">HELP ME BECOME A SLEEPING AND POWERLIFTING CHAMPION</p>
+
+        <img height="200px" src="files/img/nina.jpg"> 
+
+        <div>
+            <img src="files/gifs/rengoku.gif" class="demon-gif">
+            <img src="files/gifs/tengen.gif" class="demon-gif">
+            <img src="files/gifs/mitsuri.gif"
+                class="demon-gif">
+            <img src="files/gifs/akaza.gif" class="demon-gif">
+        </div>
+
+        <textarea placeholder="Tell me why you love me 🥺"></textarea>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+            <div style="font-size: 30px;">↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</div>
+            <div class="blink-arrow">⬇️⬇️⬇️</div>
+            <div class="blink-arrow">👇👇👇</div>
+        </div>
+
+        <h1>💸 DONATE HERE 💸</h1>
+        <input type="number" id="amountInput" placeholder="100000 is ideal 💖">
+        <br>
+        <button onclick="validate()">DONATE NOW OR NEZUKO CRIES 😭</button>
+        <div id="message"></div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+            <div class="blink-arrow">👆👆👆</div>
+            <div class="blink-arrow">⬆️⬆️⬆️</div>
+            <div style="font-size: 30px;">↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</div>
+        </div>
+
+        <div>
+            <img src="files/gifs/nezuko-2.gif"
+                class="demon-gif">
+            <img src="files/gifs/nezuko-3.gif" class="demon-gif">
+        </div>
+
+        <pre style="font-size: 24px; margin-top: 20px; white-space: pre-line;">
+(づ｡◕‿‿◕｡)づ  
+ありがとう!!!  
+(≧◡≦) ♡
+    </pre>
+    </div>
+
+    <script>
+        function validate() {
+            const amount = parseInt(document.getElementById('amountInput').value);
+            const message = document.getElementById('message');
+            if (isNaN(amount)) {
+                message.textContent = "Please enter a valid number! (ノ_<。)";
+                message.className = "error";
+                return;
+            }
+            if (amount < 10000) {
+                message.textContent = "Too low! Nezuko is disappointed (╥﹏╥)";
+                message.className = "error";
+            } else {
+                message.className = "success";
+                message.textContent = "THANK YOU!!! ✧٩(•́⌄•́๑)و ✧\nTanjiro is proud of you 💕\n(≧◡≦)";
+            }
+        }
+
+        // Sparkle trail
+        const canvas = document.getElementById("sparkleCanvas");
+        const ctx = canvas.getContext("2d");
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const sparkles = [];
+
+        document.addEventListener("mousemove", (e) => {
+            for (let i = 0; i < 5; i++) {
+                sparkles.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    size: Math.random() * 5 + 2,
+                    alpha: 1,
+                    dx: (Math.random() - 0.5) * 2,
+                    dy: (Math.random() - 0.5) * 2
+                });
+            }
+        });
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < sparkles.length; i++) {
+                const s = sparkles[i];
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 192, 203, ${s.alpha})`;
+                ctx.fill();
+                s.x += s.dx;
+                s.y += s.dy;
+                s.alpha -= 0.02;
+                if (s.alpha <= 0) {
+                    sparkles.splice(i, 1);
+                    i--;
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+
+</html>
